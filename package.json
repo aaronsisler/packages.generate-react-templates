@@ -1,0 +1,49 @@
+{
+  "name": "@aaronsisler/services.kitchen-sink",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf ./dist",
+    "build": "npx babel src --out-dir dist",
+    "postbuild": "node ./src/scripts/post-build.js",
+    "lint": "eslint \"./**/*.js\"",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "engines": {
+    "node": ">=12.0.0",
+    "yarn": ">=1.18.0"
+  },
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "minimist": "^1.2.0",
+    "replace-in-file": "^5.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-transform-arrow-functions": "^7.8.3",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "babel-jest": "^25.1.0",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.9",
+    "jest": "^25.1.0",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "typescript": "^3.7.5"
+  },
+  "author": "Aaron Sisler",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}
