@@ -8,9 +8,15 @@ The package creates a the following file(s) and places them into their correspon
 
 ### Page
 
+TODO
+
 ### Container
 
+TODO
+
 ### Component
+
+TODO
 
 ## Usage
 
@@ -25,3 +31,5 @@ The package creates a the following file(s) and places them into their correspon
    ```bash
     yarn add @ebsolutions/grt --dev
    ```
+
+2. TODO
