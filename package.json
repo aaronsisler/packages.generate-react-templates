@@ -1,5 +1,5 @@
 {
-  "name": "@aaronsisler/services.kitchen-sink",
+  "name": "@ebsolutions/grt",
   "version": "0.1.0",
   "description": "",
   "main": "dist/index.js",
@@ -41,9 +41,20 @@
     "prettier": "^1.18.2",
     "typescript": "^3.7.5"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronsisler/packages.generate-react-templates.git"
+  },
+  "keywords": [
+    "react container template",
+    "react component template",
+    "react page template",
+    "next page template"
+  ],
   "author": "Aaron Sisler",
   "license": "ISC",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  }
+  "bugs": {
+    "url": "https://github.com/aaronsisler/packages.generate-react-templates/issues"
+  },
+  "homepage": "https://github.com/aaronsisler/packages.generate-react-templates#readme"
 }
