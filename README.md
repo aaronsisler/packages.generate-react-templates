@@ -34,9 +34,16 @@ node ./node_modules/@ebsolutions/grt --templateType=COMP --name=taco
 
 2. TODO
 
+## TODO
+
+1. Container
+1. Component
+1. Add Container to Page since it imports container anyways
+
 ## Finshing touches
 
 1. Adding Example return values above
+1. Add Usage case above
 1. Testing
 
 ### Enhancements
