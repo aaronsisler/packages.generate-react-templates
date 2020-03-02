@@ -8,15 +8,15 @@ The package creates a the following file(s) and places them into their correspon
 
 ### Page
 
-TODO
+node ./node_modules/@ebsolutions/grt --templateType=PAGE --name=taco
 
 ### Container
 
-TODO
+node ./node_modules/@ebsolutions/grt --templateType=CONT --name=taco
 
 ### Component
 
-TODO
+node ./node_modules/@ebsolutions/grt --templateType=COMP --name=taco
 
 ## Usage
 
@@ -33,3 +33,12 @@ TODO
    ```
 
 2. TODO
+
+## Finshing touches
+
+1. Adding Example return values above
+1. Testing
+
+### Enhancements
+
+1. Get `npx` command to work or add a script to package.json that calls node ./node_modules/etc.
