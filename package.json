@@ -1,6 +1,6 @@
 {
-  "name": "@ebsolutions/grt",
-  "version": "0.2.0",
+  "name": "@ebsolutions/generate-react-templates",
+  "version": "0.1.1",
   "description": "",
   "main": "dist/index.js",
   "files": [

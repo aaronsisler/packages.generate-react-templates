@@ -22,12 +22,12 @@ const generateUpperName = (name, templateType) => {
 
   switch (templateType) {
     case "PAGE":
-    case "CONTAINER":
+    case "CONT":
       return `${upperName.join("")}Container`;
-    case "COMPONENT":
+    case "COMP":
       return upperName.join("");
     default:
-      throw new Error("templateType not found");
+      throw new Error(`type not found: ${templateType}`);
   }
 };
 

@@ -1,18 +1,16 @@
 /* eslint-disable no-console */
 
-const validateArgs = ({ templateType, name }) => {
-  const validTemplateTypes = ["PAGE", "CONTAINER", "COMPONENT"];
+const validateArgs = ({ name, type }) => {
+  const validTemplateTypes = ["PAGE", "CONT", "COMP"];
 
-  if (templateType === undefined) {
-    console.log(
-      "templateType' is required\ni.e. --templateType=PAGE (2 dashes)"
-    );
+  if (type === undefined) {
+    console.log("type' is required\ni.e. --type=PAGE (2 dashes)");
     process.exit(1);
   }
 
-  if (!validTemplateTypes.includes(templateType)) {
+  if (!validTemplateTypes.includes(type)) {
     console.log(
-      "templateType' must be PAGE, CONTAINER, or COMPONENT\ni.e. --templateType=PAGE (2 dashes)"
+      "type' must be PAGE, CONT, or COMP\ni.e. --type=PAGE (2 dashes)"
     );
     process.exit(1);
   }

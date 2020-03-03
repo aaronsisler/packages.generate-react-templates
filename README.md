@@ -8,44 +8,42 @@ The package creates a the following file(s) and places them into their correspon
 
 ### Page
 
-node ./node_modules/@ebsolutions/grt --templateType=PAGE --name=taco
-
 ### Container
 
-node ./node_modules/@ebsolutions/grt --templateType=CONT --name=taco
-
 ### Component
-
-node ./node_modules/@ebsolutions/grt --templateType=COMP --name=taco
 
 ## Usage
 
 1. Install the package using npm or yarn:
 
    ```bash
-    npm install @ebsolutions/grt --saveDev
+    npm install @ebsolutions/generate-react-templates --saveDev
    ```
 
    or
 
    ```bash
-    yarn add @ebsolutions/grt --dev
+    yarn add @ebsolutions/generate-react-templates --dev
    ```
 
-2. TODO
+2. Run the following commands to generate the applicable template:
 
-## TODO
+```bash
+   node ./node_modules/@ebsolutions/generate-react-templates --type=COMP --name=taco
+   node ./node_modules/@ebsolutions/generate-react-templates --type=CONT --name=taco
+   node ./node_modules/@ebsolutions/generate-react-templates --type=PAGE --name=taco
 
-1. Container
-1. Component
-1. Add Container to Page since it imports container anyways
+```
 
 ## Finshing touches
 
 1. Adding Example return values above
-1. Add Usage case above
 1. Testing
 
 ### Enhancements
 
 1. Get `npx` command to work or add a script to package.json that calls node ./node_modules/etc.
+1. Getting scripts to populate `package.json` on install
+   - "gen:comp": "node ./node_modules/@ebsolutions/generate-react-templates --type=COMP --name=taco"
+   - "gen:cont": "node ./node_modules/@ebsolutions/generate-react-templates --type=CONT --name=taco"
+   - "gen:page": "node ./node_modules/@ebsolutions/generate-react-templates --type=PAGE --name=taco"

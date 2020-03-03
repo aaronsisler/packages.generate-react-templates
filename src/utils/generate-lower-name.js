@@ -2,13 +2,13 @@ const generateLowerName = (name, templateType) => {
   const lowerName = name.toLowerCase();
 
   switch (templateType) {
-    case "COMPONENT":
+    case "COMP":
     case "PAGE":
       return lowerName;
-    case "CONTAINER":
+    case "CONT":
       return `${lowerName}-container`;
     default:
-      throw new Error("templateType not found");
+      throw new Error(`type not found: ${templateType}`);
   }
 };
 
