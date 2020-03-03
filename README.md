@@ -38,12 +38,12 @@ The package creates a the following file(s) and places them into their correspon
 ## Finshing touches
 
 1. Adding Example return values above
-1. Testing
-
-### Enhancements
-
-1. Get `npx` command to work or add a script to package.json that calls node ./node_modules/etc.
 1. Getting scripts to populate `package.json` on install
    - "gen:comp": "node ./node_modules/@ebsolutions/generate-react-templates --type=COMP --name=taco"
    - "gen:cont": "node ./node_modules/@ebsolutions/generate-react-templates --type=CONT --name=taco"
    - "gen:page": "node ./node_modules/@ebsolutions/generate-react-templates --type=PAGE --name=taco"
+
+### Enhancements
+
+1. Get `npx` command to work or add a script to package.json that calls node ./node_modules/etc.
+1. Testing
