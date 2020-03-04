@@ -5,7 +5,7 @@ import generateContainer from "./generate-container";
 import { validateArgs } from "./utils";
 
 const rootMethod = () => {
-  const { name, type } = mini(process.argv.slice(2));
+  const { name, type, useTypescript } = mini(process.argv.slice(2));
   validateArgs({ name, type });
   switch (type) {
     case "PAGE":
@@ -13,10 +13,10 @@ const rootMethod = () => {
       generateContainer(name);
       break;
     case "CONT":
-      generateContainer(name);
+      generateContainer(name, useTypescript);
       break;
     case "COMP":
-      generateComponent(name);
+      generateComponent(name, useTypescript);
       break;
     default:
       console.log(` Template Type: ${type} not found`); // eslint-disable-line no-console

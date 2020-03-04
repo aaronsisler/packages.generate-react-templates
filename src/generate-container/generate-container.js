@@ -1,35 +1,31 @@
 import fse from "fs-extra";
 import {
-  copyTemplate,
+  copyTemplates,
   generateLowerName,
   generateUpperName,
   replaceNamesInFiles
 } from "../utils";
 
-const generateContainer = name => {
+const generateContainer = (name, useTypescript) => {
   // Craft the names with logic against type
   const lowerName = generateLowerName(name, "CONT");
   const upperName = generateUpperName(name, "CONT");
-
-  const indexFile = `${__dirname}/${lowerName}/index.js`;
-  const markupFile = `${__dirname}/${lowerName}/${lowerName}.jsx`;
   const stylesFile = `${__dirname}/${lowerName}/${lowerName}.scss`;
 
   fse.mkdir(`${__dirname}/${lowerName}`);
 
   // Create copyies of templates
-  copyTemplate(
-    `${__dirname}/../templates/markup.jsx`,
-    `${__dirname}/${lowerName}/${lowerName}.jsx`
-  );
-  copyTemplate(
-    `${__dirname}/../templates/styles.scss`,
-    `${__dirname}/${lowerName}/${lowerName}.scss`
-  );
-  copyTemplate(
-    `${__dirname}/../templates/index.js`,
-    `${__dirname}/${lowerName}/index.js`
-  );
+  let indexFile;
+  let markupFile;
+  if (useTypescript) {
+    indexFile = `${__dirname}/${lowerName}/index.ts`;
+    markupFile = `${__dirname}/${lowerName}/${lowerName}.tsx`;
+  } else {
+    indexFile = `${__dirname}/${lowerName}/index.js`;
+    markupFile = `${__dirname}/${lowerName}/${lowerName}.jsx`;
+  }
+
+  copyTemplates(lowerName, useTypescript);
 
   const files = [indexFile, markupFile, stylesFile];
 
