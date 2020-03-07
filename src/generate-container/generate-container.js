@@ -1,5 +1,6 @@
 import fse from "fs-extra";
 import {
+  // copyTemplate,
   copyTemplates,
   generateLowerName,
   generateUpperName,
@@ -14,7 +15,7 @@ const generateContainer = (name, useTypescript) => {
 
   fse.mkdir(`${__dirname}/${lowerName}`);
 
-  // Create copyies of templates
+  // Create copies of templates
   let indexFile;
   let markupFile;
   if (useTypescript) {
@@ -25,7 +26,7 @@ const generateContainer = (name, useTypescript) => {
     markupFile = `${__dirname}/${lowerName}/${lowerName}.jsx`;
   }
 
-  copyTemplates(lowerName, useTypescript);
+  copyTemplates({ indexFile, markupFile, stylesFile }, useTypescript);
 
   const files = [indexFile, markupFile, stylesFile];
 

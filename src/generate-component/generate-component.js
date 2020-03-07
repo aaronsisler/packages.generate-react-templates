@@ -25,7 +25,7 @@ const generateComponent = (name, useTypescript) => {
     markupFile = `${__dirname}/${lowerName}/${lowerName}.jsx`;
   }
 
-  copyTemplates(lowerName, useTypescript);
+  copyTemplates({ indexFile, markupFile, stylesFile }, useTypescript);
 
   const files = [indexFile, markupFile, stylesFile];
 

@@ -1,6 +1,6 @@
 {
   "name": "@ebsolutions/generate-react-templates",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "This package is used to generate React template files for a component, container, or page (NextJS)",
   "main": "dist/index.js",
   "files": [

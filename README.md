@@ -45,5 +45,6 @@ The package creates a the following file(s) and places them into their correspon
 
 ### Enhancements
 
+1. Gracefully fail if directories already exist so you don't have to scan the crappy catch log messages
 1. Get `npx` command to work or add a script to package.json that calls node ./node_modules/etc.
 1. Testing
