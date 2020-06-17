@@ -1,9 +1,9 @@
 import fse from "fs-extra";
 import {
-  // copyTemplate,
   copyTemplates,
   generateLowerName,
   generateUpperName,
+  moveFiles,
   replaceNamesInFiles
 } from "../utils";
 
@@ -33,7 +33,7 @@ const generateContainer = (name, useTypescript) => {
   // Replace the upper, lower, and page names using crafted names
   replaceNamesInFiles(files, lowerName, upperName);
 
-  fse.moveSync(
+  moveFiles(
     `${__dirname}/${lowerName}/`,
     `${process.cwd()}/src/containers/${lowerName}`
   );

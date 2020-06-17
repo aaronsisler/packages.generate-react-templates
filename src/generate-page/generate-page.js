@@ -1,9 +1,9 @@
-import fse from "fs-extra";
 import {
   copyTemplate,
   generateLowerName,
   generatePageName,
   generateUpperName,
+  moveFiles,
   replaceNamesInFiles
 } from "../utils";
 
@@ -25,7 +25,7 @@ const generatePage = name => {
   // Replace the upper, lower, and page names using crafted names
   replaceNamesInFiles(files, lowerName, upperName, pageName);
 
-  fse.moveSync(file, `${process.cwd()}/src/pages/${lowerName}.js`);
+  moveFiles(file, `${process.cwd()}/src/pages/${lowerName}.js`);
 };
 
 export default generatePage;

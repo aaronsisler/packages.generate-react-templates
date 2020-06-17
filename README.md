@@ -1,16 +1,6 @@
 # Generate React Templates
 
-This package is used to generate React template files for a component, container, or page (NextJS)
-
-## Example return value:
-
-The package creates a the following file(s) and places them into their corresponding directory.
-
-### Page
-
-### Container
-
-### Component
+This package is used to generate React template files for a component, container, or page (NextJS). The container and component files returned can be either Typescript or Javascript depending on the flag passed.
 
 ## Usage
 
@@ -26,7 +16,7 @@ The package creates a the following file(s) and places them into their correspon
     yarn add @ebsolutions/generate-react-templates --dev
    ```
 
-2. Run the following commands to generate the applicable template:
+2. Run the desired command to generate the applicable template(s):
 
 ```bash
    node ./node_modules/@ebsolutions/generate-react-templates --type=COMP --name=taco
@@ -35,9 +25,38 @@ The package creates a the following file(s) and places them into their correspon
 
 ```
 
+**NOTE**: Adding --useTypescript==true to the CONT and COMP types will return Typescript (`.tsx` and `.ts`) files.
+
+## Example return value:
+
+The package creates a the following file(s) and places them into their corresponding directory.
+
+### Page
+
+Creates a page in the `pages/` directory as shown below:
+
+      src/pages/page-name.js
+
+### Container
+
+Creates a container (Typescript or Javascript) in the `containers/` directory with file structure below:
+
+      containers/name-container/
+         - name-container.jsx`
+         - index.js
+         - name-container.scss
+
+### Component
+
+Creates a component (Typescript or Javascript) in the `components/` directory with file structure below:
+
+     components/name-component/
+         - name-component.jsx`
+         - index.js
+         - name-component.scss
+
 ## Finshing touches
 
-1. Adding Example return values above
 1. Getting scripts to populate `package.json` on install
    - "gen:comp": "node ./node_modules/@ebsolutions/generate-react-templates --type=COMP --name=taco"
    - "gen:cont": "node ./node_modules/@ebsolutions/generate-react-templates --type=CONT --name=taco"
@@ -45,6 +64,5 @@ The package creates a the following file(s) and places them into their correspon
 
 ### Enhancements
 
-1. Gracefully fail if directories already exist so you don't have to scan the crappy catch log messages
 1. Get `npx` command to work or add a script to package.json that calls node ./node_modules/etc.
 1. Testing

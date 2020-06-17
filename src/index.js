@@ -2,11 +2,12 @@ import mini from "minimist";
 import generatePage from "./generate-page";
 import generateComponent from "./generate-component";
 import generateContainer from "./generate-container";
-import { validateArgs } from "./utils";
+import { validateArgs, validateProject } from "./utils";
 
 const rootMethod = () => {
   const { name, type, useTypescript } = mini(process.argv.slice(2));
   validateArgs({ name, type });
+  validateProject({ name, type });
   switch (type) {
     case "PAGE":
       generatePage(name);
@@ -19,8 +20,6 @@ const rootMethod = () => {
       generateComponent(name, useTypescript);
       break;
     default:
-      console.log(` Template Type: ${type} not found`); // eslint-disable-line no-console
-      console.log(`Template Types: PAGE, CONT, COMP`); // eslint-disable-line no-console
       break;
   }
 };
