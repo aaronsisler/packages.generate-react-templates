@@ -20,16 +20,4 @@ jobs:
           node-version: "12.x"
 
       - name: Install dependencies
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: install # will run `yarn install` command
-
-      - name: Build
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: build # will run `yarn build` command
-
-      - name: Publish
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_auth_token}}
+        run: npm install
