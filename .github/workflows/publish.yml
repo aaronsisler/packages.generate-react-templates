@@ -17,9 +17,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: "12.x"
-          registry-url: "https://registry.npmjs.org"
-          scope: "@ebsolutions"
+          node-version: 12
+          registry-url: https://registry.npmjs.org
+          scope: ebsolutions
 
       - name: Install dependencies
         run: npm install
