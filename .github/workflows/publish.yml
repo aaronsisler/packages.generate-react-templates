@@ -29,7 +29,7 @@ jobs:
 
       - name: Publish
         run: |
-          cat .npmrc
+          cat ./.npmrc
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
