@@ -28,6 +28,8 @@ jobs:
         run: npm run build
 
       - name: Publish
-        run: npm publish
+        run: |
+          cat .npmrc
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
