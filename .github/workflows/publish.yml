@@ -36,4 +36,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
 
       - name: Publish
-        run: npm publish
+        run: |
+          cat /home/runner/work/_temp/.npmrc
+          npm publish
