@@ -19,7 +19,6 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org
-          scope: ebsolutions
 
       - name: Install dependencies
         run: npm install
@@ -29,7 +28,7 @@ jobs:
 
       - name: Publish
         run: |
-          cat ./.npmrc
+          npm config set registry https://registry.npmjs.org
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
