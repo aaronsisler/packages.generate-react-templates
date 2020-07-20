@@ -20,4 +20,6 @@ jobs:
           node-version: "12.x"
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          node --version
+          npm install
