@@ -23,7 +23,7 @@
     "replace-in-file": "^5.0.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
+    "@babel/cli": "^7.16.0",
     "@babel/compat-data": "7.8.0",
     "@babel/core": "^7.8.4",
     "@babel/plugin-proposal-numeric-separator": "^7.10.4",
