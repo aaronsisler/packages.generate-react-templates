@@ -44,7 +44,7 @@ Creates a container (Typescript or Javascript) in the `containers/` directory wi
       containers/name-container/
          - name-container.jsx`
          - index.js
-         - name-container.scss
+         - name-container.module.scss
 
 ### Component
 
@@ -53,7 +53,7 @@ Creates a component (Typescript or Javascript) in the `components/` directory wi
      components/name-component/
          - name-component.jsx`
          - index.js
-         - name-component.scss
+         - name-component.module.scss
 
 ## Finshing touches
 

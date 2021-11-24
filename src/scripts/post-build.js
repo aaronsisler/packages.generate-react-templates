@@ -23,7 +23,7 @@ const copyTemplateDirectory = () => {
 
   const otherFiles = fse
     .readdirSync(`${__dirname}/../templates/`)
-    .filter(item => item.includes(".scss") || item.includes(".js"));
+    .filter(item => item.includes(".module.scss") || item.includes(".js"));
 
   otherFiles.forEach(file => {
     fse.copyFileSync(
