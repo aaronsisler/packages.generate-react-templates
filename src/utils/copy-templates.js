@@ -12,7 +12,7 @@ const copyTemplates = (
     copyTemplate(`${__dirname}/../templates/javascript/index.js`, indexFile);
   }
 
-  copyTemplate(`${__dirname}/../templates/styles.scss`, stylesFile);
+  copyTemplate(`${__dirname}/../templates/styles.module.scss`, stylesFile);
 };
 
 export default copyTemplates;

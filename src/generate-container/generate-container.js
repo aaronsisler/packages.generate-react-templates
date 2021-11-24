@@ -11,7 +11,7 @@ const generateContainer = (name, useTypescript) => {
   // Craft the names with logic against type
   const lowerName = generateLowerName(name, "CONT");
   const upperName = generateUpperName(name, "CONT");
-  const stylesFile = `${__dirname}/${lowerName}/${lowerName}.scss`;
+  const stylesFile = `${__dirname}/${lowerName}/${lowerName}.module.scss`;
 
   fse.mkdir(`${__dirname}/${lowerName}`);
 
