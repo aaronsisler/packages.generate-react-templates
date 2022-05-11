@@ -1,1 +1,1 @@
-export { default } from "./LOWER_NAME";
+export { UPPER_NAME } from "./LOWER_NAME";
